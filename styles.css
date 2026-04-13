@@ -1,24 +1,37 @@
-/* ===== Custom Properties ===== */
+/* ===== Brand Visual System (2026-04-12) ===== */
 :root {
-    --dark: #0a0f1a;
-    --dark-surface: #111827;
-    --dark-card: #162033;
-    --light: #f8fafc;
-    --light-card: #ffffff;
-    --accent: #00c8ff;
-    --accent-hover: #00aee0;
-    --accent-subtle: rgba(0, 200, 255, 0.08);
-    --text-on-dark: #e2e8f0;
-    --text-muted-dark: #94a3b8;
-    --text-on-light: #0f172a;
-    --text-muted-light: #64748b;
-    --border-dark: rgba(255, 255, 255, 0.08);
-    --border-light: rgba(0, 0, 0, 0.08);
-    --font-display: 'Plus Jakarta Sans', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
+    /* Palette */
+    --cream: #f5efe4;
+    --cream-warm: #efe7d7;
+    --green: #043927;
+    --green-hover: #062f20;
+    --walnut: #773f1a;
+    --walnut-hover: #5e2f10;
+
+    /* Soft tints (for hovers, subtle backgrounds) */
+    --green-soft: rgba(4, 57, 39, 0.08);
+    --green-softer: rgba(4, 57, 39, 0.04);
+    --walnut-soft: rgba(119, 63, 26, 0.08);
+
+    /* Borders + shadows (warm-tinted) */
+    --green-border: rgba(4, 57, 39, 0.12);
+    --green-border-strong: rgba(4, 57, 39, 0.25);
+    --paper-shadow-sm: 0 2px 8px rgba(60, 40, 20, 0.06);
+    --paper-shadow: 0 8px 30px rgba(60, 40, 20, 0.08);
+    --paper-shadow-lg: 0 12px 48px rgba(60, 40, 20, 0.12);
+
+    /* Typography */
+    --font-display: 'Lora', Georgia, serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Shape */
     --radius: 16px;
     --radius-sm: 10px;
+    --radius-xs: 6px;
+
+    /* Motion */
     --transition: 0.3s ease;
+    --transition-fast: 0.15s ease;
 }
 
 /* ===== Reset & Base ===== */
