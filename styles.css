@@ -316,67 +316,74 @@ strong {
 
 /* ===== Hero ===== */
 .hero {
-    min-height: 100vh;
+    min-height: 92vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--dark);
+    background: var(--cream);
     position: relative;
     overflow: hidden;
-    padding: 8rem 2rem 6rem;
+    padding: 9rem 2rem 6rem;
 }
 
+/* Warm radial glow — replaces the old cyan glow. Very subtle walnut. */
 .hero-glow {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, rgba(0, 200, 255, 0.06) 0%, transparent 60%);
-    animation: glow-pulse 6s ease-in-out infinite alternate;
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, rgba(119, 63, 26, 0.06) 0%, transparent 60%);
+    animation: glow-pulse 8s ease-in-out infinite alternate;
     pointer-events: none;
 }
 
 @keyframes glow-pulse {
     from {
         opacity: 0.5;
-        transform: translate(-50%, -50%) scale(0.8);
+        transform: translate(-50%, -50%) scale(0.9);
     }
     to {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -50%) scale(1.1);
     }
 }
 
 .hero-content {
     text-align: center;
-    max-width: 850px;
+    max-width: 880px;
     position: relative;
     z-index: 1;
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 800;
-    color: #fff;
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.25rem);
+    font-weight: 700;
+    color: var(--green);
     margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
 }
 
 .hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: var(--text-muted-dark);
-    max-width: 650px;
-    margin: 0 auto 1rem;
-    line-height: 1.7;
+    font-family: var(--font-body);
+    font-size: clamp(1.0625rem, 2vw, 1.25rem);
+    color: var(--walnut);
+    max-width: 680px;
+    margin: 0 auto 1.25rem;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
 .hero-guarantee {
-    font-size: 1rem;
-    color: var(--accent);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    color: var(--green);
     font-weight: 600;
     margin-bottom: 2.5rem;
+    letter-spacing: 0.02em;
 }
 
 /* ===== Problem ===== */
