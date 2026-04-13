@@ -22,6 +22,13 @@ const BREAKPOINTS = [
     });
     const page = await ctx.newPage();
     await page.goto(URL, { waitUntil: "networkidle" });
+    // Force-reveal scroll-animation elements so off-screen content
+    // is visible in fullPage screenshots (IntersectionObserver doesn't
+    // fire for elements outside the initial viewport).
+    await page.addStyleTag({
+      content: ".reveal { opacity: 1 !important; transform: none !important; }",
+    });
+    await page.waitForTimeout(300);
     await page.screenshot({ path: `${OUT}/${bp.name}.png`, fullPage: true });
     console.log(`${bp.name}: saved`);
     await ctx.close();
