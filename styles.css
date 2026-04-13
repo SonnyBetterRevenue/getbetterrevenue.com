@@ -988,13 +988,13 @@ strong {
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(10, 15, 26, 0.98);
+        background: rgba(245, 239, 228, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 1.5rem 2rem;
         gap: 1.25rem;
-        border-top: 1px solid var(--border-dark);
+        border-top: 1px solid var(--green-border);
     }
 
     .nav-menu.open {
