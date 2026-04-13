@@ -4,6 +4,9 @@ docs/
 REBRAND.md
 print/
 
+# Local screenshot baselines (rebrand verification)
+.screenshots/
+
 # OS / editor
 .DS_Store
 Thumbs.db
