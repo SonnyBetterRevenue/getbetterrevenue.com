@@ -485,47 +485,53 @@ strong {
 }
 
 .package-card {
-    background: var(--light-card);
-    border: 1px solid var(--border-light);
+    background: var(--cream);
+    border: 1px solid var(--green-border);
     border-radius: var(--radius);
     padding: 2.5rem;
     transition: all var(--transition);
     display: flex;
     flex-direction: column;
+    box-shadow: var(--paper-shadow-sm);
 }
 
 .package-card:hover {
-    border-color: rgba(0, 200, 255, 0.3);
-    box-shadow: 0 8px 40px rgba(0, 200, 255, 0.08);
+    border-color: var(--green-border-strong);
+    box-shadow: var(--paper-shadow);
     transform: translateY(-4px);
 }
 
 .package-tag {
     display: inline-block;
-    font-size: 0.8125rem;
-    font-weight: 700;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    background: var(--accent-subtle);
-    padding: 0.25rem 0.75rem;
-    border-radius: 6px;
+    letter-spacing: 0.14em;
+    color: var(--walnut);
+    background: var(--walnut-soft);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-xs);
     margin-bottom: 1rem;
     width: fit-content;
 }
 
 .package-name {
-    font-size: 1.5rem;
+    font-family: var(--font-display);
+    font-size: 1.625rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
+    color: var(--green);
+    letter-spacing: -0.015em;
 }
 
 .package-pitch {
-    color: var(--text-muted-light);
+    color: var(--walnut);
+    font-family: var(--font-body);
     font-size: 0.9375rem;
     font-style: italic;
     margin-bottom: 1.5rem;
-    line-height: 1.6;
+    line-height: 1.55;
     flex-grow: 1;
 }
 
@@ -539,39 +545,44 @@ strong {
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
+    font-family: var(--font-body);
     font-size: 0.9375rem;
     line-height: 1.5;
-    color: var(--text-on-light);
+    color: var(--green);
 }
 
 .package-features svg {
     flex-shrink: 0;
     margin-top: 3px;
-    color: var(--accent);
+    color: var(--green);
 }
 
 /* ===== Bundle Pricing ===== */
 .bundle-pricing {
-    background: var(--light-card);
-    border: 1px solid var(--border-light);
+    background: var(--cream);
+    border: 1px solid var(--green-border);
     border-radius: var(--radius);
     overflow: hidden;
     margin-bottom: 1rem;
+    box-shadow: var(--paper-shadow-sm);
 }
 
 .bundle-header {
-    padding: 1.5rem 2rem 0;
+    padding: 1.75rem 2rem 0;
     text-align: center;
 }
 
 .bundle-header h3 {
-    font-size: 1.25rem;
+    font-family: var(--font-display);
+    font-size: 1.375rem;
     font-weight: 700;
+    color: var(--green);
 }
 
 .bundle-note {
+    font-family: var(--font-body);
     font-size: 0.875rem;
-    color: var(--text-muted-light);
+    color: var(--walnut);
     margin-top: 0.25rem;
 }
 
@@ -586,65 +597,85 @@ strong {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1.75rem 1.5rem;
     border-radius: var(--radius-sm);
     text-align: center;
     position: relative;
+    color: var(--green);
 }
 
+/* Highlighted option — green background replaces the old dark treatment */
 .bundle-best {
-    background: var(--dark);
-    color: #fff;
+    background: var(--green);
+    color: var(--cream);
+}
+
+.bundle-best .bundle-count,
+.bundle-best .bundle-label {
+    color: var(--cream);
 }
 
 .bundle-badge {
     position: absolute;
-    top: -0.5rem;
+    top: -0.55rem;
+    font-family: var(--font-body);
     font-size: 0.6875rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    background: var(--accent);
-    color: var(--dark);
-    padding: 0.2rem 0.75rem;
+    letter-spacing: 0.12em;
+    background: var(--walnut);
+    color: var(--cream);
+    padding: 0.25rem 0.85rem;
     border-radius: 20px;
 }
 
 .bundle-count {
+    font-family: var(--font-body);
     font-size: 0.875rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+    color: var(--walnut);
 }
 
 .bundle-rate {
     font-family: var(--font-display);
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 2.75rem;
+    font-weight: 700;
     line-height: 1;
+    color: var(--green);
+    letter-spacing: -0.02em;
 }
 
 .bundle-best .bundle-rate {
-    color: var(--accent);
+    color: var(--cream);
 }
 
 .bundle-label {
+    font-family: var(--font-body);
     font-size: 0.8125rem;
-    opacity: 0.6;
+    opacity: 0.7;
     margin-top: 0.25rem;
 }
 
 .bundle-save {
+    font-family: var(--font-body);
     font-size: 0.8125rem;
     font-weight: 700;
-    color: var(--accent);
+    color: var(--walnut);
     margin-top: 0.5rem;
+}
+
+.bundle-best .bundle-save {
+    color: var(--cream);
+    opacity: 0.85;
 }
 
 .bundle-revshare {
     text-align: center;
+    font-family: var(--font-body);
     font-size: 0.875rem;
-    color: var(--text-muted-light);
+    color: var(--walnut);
     padding: 0 2rem 1.5rem;
 }
 
@@ -656,31 +687,36 @@ strong {
 }
 
 .addon-card {
-    background: var(--dark-card);
-    border: 1px solid var(--border-dark);
+    background: var(--cream);
+    border: 1px solid var(--green-border);
     border-radius: var(--radius);
     padding: 2rem;
     transition: all var(--transition);
     display: flex;
     flex-direction: column;
+    box-shadow: var(--paper-shadow-sm);
 }
 
 .addon-card:hover {
-    border-color: rgba(0, 200, 255, 0.2);
+    border-color: var(--green-border-strong);
     transform: translateY(-2px);
+    box-shadow: var(--paper-shadow);
 }
 
 .addon-card h3 {
-    font-size: 1.125rem;
+    font-family: var(--font-display);
+    font-size: 1.1875rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--green);
     margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
 }
 
 .addon-card p {
-    color: var(--text-muted-dark);
+    color: var(--walnut);
+    font-family: var(--font-body);
     font-size: 0.9375rem;
-    line-height: 1.5;
+    line-height: 1.55;
     margin-bottom: 1.25rem;
     flex-grow: 1;
 }
@@ -692,14 +728,16 @@ strong {
 }
 
 .addon-setup {
+    font-family: var(--font-body);
     font-weight: 700;
-    color: #fff;
+    color: var(--green);
     font-size: 0.9375rem;
 }
 
 .addon-monthly {
+    font-family: var(--font-body);
     font-size: 0.8125rem;
-    color: var(--text-muted-dark);
+    color: var(--walnut);
 }
 
 /* ===== Guarantee ===== */
