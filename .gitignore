@@ -1,0 +1,22 @@
+# Internal planning / agent artifacts — not for the public website repo
+.superpowers/
+docs/
+REBRAND.md
+print/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Dependencies / build output (if any get added later)
+node_modules/
+dist/
+*.log
+
+# Secrets
+.env
+.env.*
+!.env.example
