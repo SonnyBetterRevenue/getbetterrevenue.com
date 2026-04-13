@@ -394,18 +394,20 @@ strong {
 }
 
 .problem-card {
-    background: var(--light-card);
-    border: 1px solid var(--border-light);
+    background: var(--cream);
+    border: 1px solid var(--green-border);
     border-radius: var(--radius);
-    padding: 2rem;
+    padding: 2.25rem 2rem;
     position: relative;
     overflow: hidden;
     transition: all var(--transition);
+    box-shadow: var(--paper-shadow-sm);
 }
 
 .problem-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    transform: translateY(-3px);
+    box-shadow: var(--paper-shadow);
+    border-color: var(--green-border-strong);
 }
 
 .problem-accent {
@@ -414,18 +416,21 @@ strong {
     left: 0;
     right: 0;
     height: 3px;
-    background: var(--accent);
+    background: var(--green);
 }
 
 .problem-card h3 {
-    font-size: 1.25rem;
+    font-family: var(--font-display);
+    font-size: 1.375rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
     margin-top: 0.5rem;
+    color: var(--green);
 }
 
 .problem-card p {
-    color: var(--text-muted-light);
+    color: var(--walnut);
+    font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -445,23 +450,26 @@ strong {
 
 .step-number {
     font-family: var(--font-display);
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: var(--accent);
-    opacity: 0.25;
-    margin-bottom: 1rem;
+    font-size: 3.75rem;
+    font-weight: 700;
+    color: var(--walnut);
+    opacity: 0.35;
+    margin-bottom: 0.75rem;
     line-height: 1;
+    font-feature-settings: "tnum";
 }
 
 .process-step h3 {
-    font-size: 1.375rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
-    color: #fff;
+    color: var(--green);
 }
 
 .process-step p {
-    color: var(--text-muted-dark);
+    color: var(--walnut);
+    font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.6;
     max-width: 320px;
