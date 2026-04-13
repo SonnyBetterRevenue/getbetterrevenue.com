@@ -207,14 +207,15 @@ strong {
     z-index: 1000;
     padding: 1.25rem 0;
     transition: all var(--transition);
+    background: transparent;
 }
 
 .navbar.scrolled {
-    background: rgba(10, 15, 26, 0.92);
+    background: rgba(245, 239, 228, 0.92);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 0.75rem 0;
-    box-shadow: 0 1px 0 var(--border-dark);
+    box-shadow: 0 1px 0 var(--green-border);
 }
 
 .nav-container {
@@ -225,10 +226,10 @@ strong {
 
 .nav-logo {
     font-family: var(--font-display);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.5rem;
-    color: #fff;
-    letter-spacing: -0.02em;
+    color: var(--green);
+    letter-spacing: -0.015em;
 }
 
 .nav-menu {
@@ -238,7 +239,8 @@ strong {
 }
 
 .nav-link {
-    color: var(--text-muted-dark);
+    color: var(--walnut);
+    font-family: var(--font-body);
     font-size: 0.9375rem;
     font-weight: 500;
     transition: color var(--transition);
@@ -252,12 +254,12 @@ strong {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--accent);
+    background: var(--green);
     transition: width var(--transition);
 }
 
 .nav-link:hover {
-    color: #fff;
+    color: var(--green);
 }
 
 .nav-link:hover::after {
@@ -265,18 +267,19 @@ strong {
 }
 
 .nav-cta {
-    background: var(--accent);
-    color: var(--dark);
+    background: var(--green);
+    color: var(--cream);
     padding: 0.625rem 1.25rem;
     border-radius: var(--radius-sm);
+    font-family: var(--font-body);
     font-size: 0.9375rem;
-    font-weight: 700;
+    font-weight: 600;
     transition: all var(--transition);
 }
 
 .nav-cta:hover {
-    background: var(--accent-hover);
-    box-shadow: 0 0 20px rgba(0, 200, 255, 0.2);
+    background: var(--green-hover);
+    box-shadow: var(--paper-shadow-sm);
 }
 
 .nav-toggle {
@@ -293,7 +296,7 @@ strong {
 .nav-toggle span {
     width: 24px;
     height: 2px;
-    background: #fff;
+    background: var(--green);
     transition: all var(--transition);
     display: block;
     transform-origin: center;
