@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Valuation Audit — Better Revenue</title>
+    <meta name="description" content="9 questions about your business. About 3 minutes. We'll email your valuation range within 24 hours.">
+    <meta name="theme-color" content="#f5efe4">
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="audit-body">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-static" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">Better Revenue</a>
+        </div>
+    </nav>
+
+    <main class="audit-main">
+
+        <!-- Step indicator -->
+        <div class="audit-steps-indicator" id="stepIndicator">
+            <div class="audit-step-dot active" data-step="1"><span>1</span><label>Contact</label></div>
+            <div class="audit-step-line"></div>
+            <div class="audit-step-dot" data-step="2"><span>2</span><label>Questions</label></div>
+            <div class="audit-step-line"></div>
+            <div class="audit-step-dot" data-step="3"><span>3</span><label>Done</label></div>
+        </div>
+
+        <!-- Step 1: Contact info -->
+        <section class="audit-step active" id="step1">
+            <div class="audit-container">
+                <header class="audit-header">
+                    <h1 class="audit-title">Let's start with a few details.</h1>
+                    <p class="audit-subtitle">So we know who to send your valuation to. 30 seconds.</p>
+                </header>
+
+                <form class="audit-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="businessName">Business name</label>
+                        <input type="text" id="businessName" name="businessName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactName">Your name</label>
+                        <input type="text" id="contactName" name="contactName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email <span class="form-hint">(or phone below)</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone <span class="form-hint">(or email above)</span></label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
+                    </div>
+                    <div class="form-error-inline" id="contactError"></div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-submit">
+                        <span class="btn-text">Continue to Questions</span>
+                        <span class="btn-arrow">&rarr;</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Step 2: Audit questions -->
+        <section class="audit-step" id="step2">
+            <div class="audit-container">
+                <header class="audit-header">
+                    <h1 class="audit-title">Now the 9 questions.</h1>
+                    <p class="audit-subtitle">All multiple choice. About 3 minutes.</p>
+                </header>
+
+                <form class="audit-form" id="auditForm" novalidate>
+
+                    <!-- Q1 -->
+                    <fieldset class="audit-question">
+                        <legend><span class="q-num">Q1.</span> What industry is your business in?</legend>
+                        <div class="audit-options">
+                            <label class="audit-option"><input type="radio" name="industry" value="home_trade_property" required> Home, trade & property services <span class="opt-hint">HVAC, plumbing, electrical, roofing, landscaping, cleaning, pest control, contracting, auto, manufacturing, trades</span></label>
+                            <label class="audit-option"><input type="radio" name="industry" value="health_wellness_beauty"> Health, wellness & beauty <span class="opt-hint">Med-spa, dental, chiropractic, optometry, salon, fitness</span></label>
+                            <label class="audit-option"><input type="radio" name="industry" value="pet_veterinary"> Pet & veterinary</label>
+                            <label class="audit-option"><input type="radio" name="industry" value="food_retail_hospitality"> Food, retail & hospitality <span class="opt-hint">Restaurants, cafés, retail, e-commerce, hotels, events</span></label>
+                            <label class="audit-option"><input type="radio" name="industry" value="professional_services"> Professional services <span class="opt-hint">Accounting, legal, marketing, consulting, IT/MSP, education, real estate</span></label>
+                            <label class="audit-option"><input type="radio" name="industry" value="other"> Other</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Q2 -->
+                    <fieldset class="audit-question">
+                        <legend><span class="q-num">Q2.</span> How long have you been running it?</legend>
+                        <div class="audit-options">
+                            <label class="audit-option"><input type="radio" name="tenure" value="under_1" required> Under 1 year</label>
+                            <label class="audit-option"><input type="radio" name="tenure" value="1_to_3"> 1–3 years</label>
+                            <label class="audit-option"><input type="radio" name="tenure" value="3_to_10"> 3–10 years</label>
+                            <label class="audit-option"><input type="radio" name="tenure" value="10_plus"> 10+ years</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Q3 -->
+                    <fieldset class="audit-question">
+                        <legend><span class="q-num">Q3.</span> What was last year's revenue?</legend>
+                        <div class="audit-options">
+                            <label class="audit-option"><input type="radio" name="revenue" value="under_300k" required> Under $300K</label>
+                            <label class="audit-option"><input type="radio" name="revenue" value="300k_1m"> $300K – $1M</label>
+                            <label class="audit-option"><input type="radio" name="revenue" value="1m_3m"> $1M – $3M</label>
+                            <label class="audit-option"><input type="radio" name="revenue" value="3m_10m"> $3M – $10M</label>
+                            <label class="audit-option"><input type="radio" name="revenue" value="10m_plus"> $10M+</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Q4 -->
+                    <fieldset class="audit-question">
+                        <legend><span class="q-num">Q4.</span> How has your revenue changed over the last 3 years?</legend>
+                        <div class="audit-options">
+                            <label class="audit-option"><input type="radio" name="trajectory" value="declined" required> Declined</label>
+                            <label class="audit-option"><input type="radio" name="trajectory" value="flat"> Stayed flat</label>
+                            <label class="audit-option"><input type="radio" name="trajectory" value="grew_slowly"> Grew slowly</label>
+                            <label class="audit-option"><input type="radio" name="trajectory" value="grew_steadily"> Grew steadily</label>
+                            <label class="audit-option"><input type="radio" name="trajectory" value="grew_fast"> Grew fast</label>
+                            <label class="audit-option"><input type="radio" name="trajectory" value="not_sure"> Not sure</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Q5 -->
+                    <fieldset class="audit-question">
+                        <legend><span class="q-num">Q5.</span> What share of your revenue is recurring (memberships, contracts, subscriptions, scheduled standing work) vs. one-off transactions?</legend>
+                        <div class="audit-options">
+                            <label class="audit-option"><input type="radio" name="recurring" value="almost_all_one_off" required> Almost all one-off</label>
+                            <label class="audit-option"><input type="radio" name="recurring" value="mostly_one_off"> Mostly one-off</label>
+                            <label class="audit-option"><input type="radio" name="recurring" value="balanced"> Roughly balanced</label>
+                            <label class="audit-option"><input type="radio" name="recurring" value="mostly_recurring"> Mostly recurring</label>
+                            <label class="audit-option"><input type="radio" name="recurring" value="almost_all_recurring"> Almost all recurring</label>
+                            <label class="audit-option"><input type="radio" name="recurring" value="not_sure"> Not sure</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Q6 -->
+                    <fieldset class="audit-question">
+                        <legend><span class="q-num">Q6.</span> How much of your revenue comes from your single biggest customer or account?</legend>
+                        <div class="audit-options">
+                            <label class="audit-option"><input type="radio" name="concentration" value="under_5" required> Under 5%</label>
+                            <label class="audit-option"><input type="radio" name="concentration" value="5_15"> 5–15%</label>
+                            <label class="audit-option"><input type="radio" name="concentration" value="15_30"> 15–30%</label>
+                            <label class="audit-option"><input type="radio" name="concentration" value="30_50"> 30–50%</label>
+                            <label class="audit-option"><input type="radio" name="concentration" value="over_50"> Over 50%</label>
+                            <label class="audit-option"><input type="radio" name="concentration" value="not_sure"> Not sure</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Q7 -->
+                    <fieldset class="audit-question">
+                        <legend><span class="q-num">Q7.</span> How does your revenue change month to month across a year?</legend>
+                        <div class="audit-options">
+                            <label class="audit-option"><input type="radio" name="seasonality" value="steady" required> Steady year-round</label>
+                            <label class="audit-option"><input type="radio" name="seasonality" value="mild_swings"> Mild seasonal swings</label>
+                            <label class="audit-option"><input type="radio" name="seasonality" value="big_swings"> Big seasonal swings</label>
+                            <label class="audit-option"><input type="radio" name="seasonality" value="unpredictable"> Wildly unpredictable</label>
+                            <label class="audit-option"><input type="radio" name="seasonality" value="not_sure"> Not sure</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Q8 -->
+                    <fieldset class="audit-question">
+                        <legend><span class="q-num">Q8.</span> How dependent is your customer flow on a platform you don't control? <span class="legend-hint">(Yelp, Google, Booksy, DoorDash, Instagram, etc.)</span></legend>
+                        <div class="audit-options">
+                            <label class="audit-option"><input type="radio" name="platform" value="not_at_all" required> Not at all — most come through channels I own</label>
+                            <label class="audit-option"><input type="radio" name="platform" value="somewhat"> Somewhat — they help but I'd survive without them</label>
+                            <label class="audit-option"><input type="radio" name="platform" value="heavily"> Heavily — most of my customers come through one or two of these</label>
+                            <label class="audit-option"><input type="radio" name="platform" value="not_sure"> Not sure</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Q9 -->
+                    <fieldset class="audit-question">
+                        <legend><span class="q-num">Q9.</span> If you stepped away for 4 weeks with no contact, what would break? <span class="legend-hint">(check all that apply)</span></legend>
+                        <div class="audit-options">
+                            <label class="audit-option"><input type="checkbox" name="keyman" value="revenue_stops"> Revenue would stop or drop fast</label>
+                            <label class="audit-option"><input type="checkbox" name="keyman" value="customers_leave"> Customers would leave</label>
+                            <label class="audit-option"><input type="checkbox" name="keyman" value="team_cant_decide"> The team can't make decisions without me</label>
+                            <label class="audit-option"><input type="checkbox" name="keyman" value="ops_grind_to_halt"> Operations would grind to a halt</label>
+                            <label class="audit-option"><input type="checkbox" name="keyman" value="nothing_critical"> Honestly, nothing critical</label>
+                            <label class="audit-option"><input type="checkbox" name="keyman" value="not_sure"> Not sure</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Decision authority (close mechanic, not part of valuation) -->
+                    <fieldset class="audit-question">
+                        <legend>One last thing: who decides whether to move forward with a consulting engagement like this?</legend>
+                        <div class="audit-options">
+                            <label class="audit-option"><input type="radio" name="authority" value="me_alone" required> Me, on my own</label>
+                            <label class="audit-option"><input type="radio" name="authority" value="me_partner"> Me, with a partner</label>
+                            <label class="audit-option"><input type="radio" name="authority" value="committee"> A committee or board</label>
+                            <label class="audit-option"><input type="radio" name="authority" value="not_sure"> Not sure yet</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-error-inline" id="auditError"></div>
+                    <div class="audit-actions">
+                        <button type="button" class="btn btn-secondary" id="backToContact">&larr; Back</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-submit">
+                            <span class="btn-text">Submit My Audit</span>
+                            <span class="btn-loading">Sending...</span>
+                            <span class="btn-arrow">&rarr;</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Step 3: Thank you -->
+        <section class="audit-step" id="step3">
+            <div class="audit-container">
+                <div class="audit-thanks">
+                    <div class="audit-thanks-mark">&#10003;</div>
+                    <h1 class="audit-title">Got it. We're on it.</h1>
+                    <p class="audit-subtitle">We'll model your today-valuation range and email it to you within 24 hours, along with a calendar link to book your 30-minute call.</p>
+                    <p class="audit-thanks-meta">If you don't see it, check spam — and if it's not there, reply to this address.</p>
+                    <a href="index.html" class="btn btn-primary btn-lg" style="margin-top:2rem;">Back to Better Revenue <span class="btn-arrow">&rarr;</span></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <span class="footer-logo">Better Revenue</span>
+            <span class="footer-copy">&copy; 2026 Better Revenue. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="audit.js"></script>
+</body>
+</html>
