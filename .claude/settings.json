@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status --short)",
+      "Bash(git status --porcelain)",
+      "Bash(git diff --stat)",
+      "Bash(git diff --name-only)",
+      "Bash(git rev-parse HEAD)",
+      "Bash(git ls-files)",
+      "Bash(gh api -X POST repos/SonnyBetterRevenue/getbetterrevenue.com/pulls/*/ccr/ready_for_review)",
+      "Bash(gh api -X PUT repos/SonnyBetterRevenue/getbetterrevenue.com/pulls/*/merge -f sha=* -f merge_method=squash)",
+      "Bash(git status)",
+      "PowerShell(git status)",
+      "PowerShell(git status --short)",
+      "PowerShell(git diff --stat)",
+      "PowerShell(git diff --name-only)",
+      "Bash(git diff --name-status)",
+      "PowerShell(git diff --name-status)",
+      "Bash(git diff --check)",
+      "PowerShell(git diff --check)",
+      "PowerShell(git ls-files)",
+      "Bash(git branch --show-current)",
+      "PowerShell(git branch --show-current)",
+      "Bash(git log --oneline -5)",
+      "PowerShell(git log --oneline -5)",
+      "Bash(git log --oneline -8)",
+      "PowerShell(git log --oneline -8)",
+      "Bash(git log --oneline -10)",
+      "PowerShell(git log --oneline -10)",
+      "Bash(git rev-parse --show-prefix)",
+      "PowerShell(git rev-parse --show-prefix)",
+      "Bash(git rev-parse --is-inside-work-tree)",
+      "PowerShell(git rev-parse --is-inside-work-tree)",
+      "Bash(git rev-parse --show-toplevel)",
+      "PowerShell(git rev-parse --show-toplevel)",
+      "Bash(git worktree list)",
+      "PowerShell(git worktree list)",
+      "Bash(pwd)",
+      "PowerShell(Get-Location)"
+    ]
+  }
+}
